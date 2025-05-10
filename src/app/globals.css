@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Soft Gray Background */
+    --background: 220 20% 97%; /* #f5f6f7 - a bit lighter than F5F5F5 */
+    /* Dark Gray Foreground/Text */
+    --foreground: 220 15% 25%; /* #353b41 */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+
+    /* Teal Primary - for interactive elements, buttons */
+    --primary: 180 100% 25%; /* #008080 */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    /* Light Blue Secondary - for less prominent accents, hover states or card backgrounds */
+    --secondary: 190 100% 94.9%; /* #E0F7FA */
+    --secondary-foreground: 180 80% 20%; /* Darker Teal for text on light blue */
+
+    --muted: 220 17% 90%; /* Lighter gray for muted text/elements */
+    --muted-foreground: 220 10% 45%; /* Slightly darker gray for muted text */
+
+    /* Accent - Using Teal for active highlights or borders, can be same as primary */
+    --accent: 180 100% 25%; 
+    --accent-foreground: 0 0% 100%; 
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 85%; /* Gray for borders */
+    --input: 0 0% 100%; /* White for input backgrounds, with border */
+    --ring: 180 100% 30%; /* Teal for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors (default) */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* Dark theme (adjust if full dark mode is needed) */
+    --background: 220 15% 10%; 
+    --foreground: 0 0% 98%; 
+
+    --card: 220 15% 15%; 
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 15% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 180 100% 35%; /* Brighter Teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 50% 25%; /* Darker Light Blue */
+    --secondary-foreground: 190 90% 80%; /* Lighter Blue text */
+
+    --muted: 220 15% 25%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 180 100% 35%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 20%; 
+    --ring: 180 100% 40%; 
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
